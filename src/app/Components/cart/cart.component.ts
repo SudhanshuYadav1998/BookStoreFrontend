@@ -10,7 +10,6 @@ export class CartComponent implements OnInit {
 
   constructor(private cartService:CartService) { }
   cartList: any;
-  checkStock: boolean = false;
   defaultImage= "https://res.cloudinary.com/dd3brtmjv/image/upload/v1669210312/640px-Image_not_available_t8zu5s.png";
 
   ngOnInit(): void {

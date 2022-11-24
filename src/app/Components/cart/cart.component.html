@@ -1,16 +1,4 @@
 <div class="example-headers-align">
-    <mat-expansion-panel [expanded]="true" hideToggle>
-        <mat-expansion-panel-header  #panelH (click)="panelH._toggle()">
-            <mat-panel-title><b>My Cart({{cartList?.length}})</b></mat-panel-title>
-            <mat-panel-description>
-                <mat-form-field appearance="outline" style="margin-bottom: -15px;">
-                    <mat-label style="font-size: 13px;">Bridgelabz Solution LLP</mat-label>
-                    <mat-select>
-                        <mat-option>Bridgelabz Solution LLP</mat-option>
-                    </mat-select>
-                </mat-form-field>
-            </mat-panel-description>
-        </mat-expansion-panel-header>
         <span *ngIf="cartList?.length<1" fxLayoutAlign="center center">Cart is Empty</span>
         <div class="cartItem" *ngFor="let cart of cartList">
             <div>
@@ -36,5 +24,4 @@
         </div>
         <mat-action-row >
             <button mat-flat-button color="primary" >Place Order</button>
-        </mat-action-row>
-    </mat-expansion-panel><br>
+        </mat-action-row><br>
