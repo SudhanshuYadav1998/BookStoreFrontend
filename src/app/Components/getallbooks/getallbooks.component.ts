@@ -44,5 +44,7 @@ export class GetallbooksComponent implements OnInit {
      this.bookList = this.bookList.sort((x: any, y: any) => y.bookId - x.bookId);
      this.sortBy="newest First";
   }
-
+  quickView(bookId:any){
+    this.router.navigateByUrl('/home/quickview/' + bookId);
+  }
 }

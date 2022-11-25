@@ -24,6 +24,7 @@ import { WishlistComponent } from './Components/wishlist/wishlist.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatSelectModule} from '@angular/material/select';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { QuickviewComponent } from './Components/quickview/quickview.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     GetallbooksComponent,
     CartComponent,
     OrdersComponent,
-    WishlistComponent
+    WishlistComponent,
+    QuickviewComponent
   ],
   imports: [
     BrowserModule,FormsModule, ReactiveFormsModule,MatToolbarModule,HttpClientModule,MatMenuModule,MatCardModule,

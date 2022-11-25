@@ -27,7 +27,7 @@
                 <div fxLayout="row" fxLayout.lt-sm="column" style="margin-bottom: 10px;">
                     <div><span class="discountPrice">Rs. {{cart.discountPrice * cart.booksQty | number:'1.2-2'}}</span></div>
                     <div><span class="actualPrice">Rs. {{cart.actualPrice * cart.booksQty | number:'1.2-2'}}</span></div>
-                    <div><span class="discount">{{((cart.actualPrice-cart.discountPrice)/cart?.actualPrice)*100 | number:'1.1-1'}}% off</span></div>
+                    <div><span class="discount">{{((cart.actualPrice-cart.discountPrice)/cart.actualPrice)*100 | number:'1.1-1'}}% off</span></div>
                 </div>
                 <div fxLayout="row" fxLayoutAlign="start center">
                     <button mat-stroked-button mat-icon-button (click)="decreaseQty(cart.cartId, cart.booksQty)" ><i class="material-icons">&#xe15b;</i></button>
