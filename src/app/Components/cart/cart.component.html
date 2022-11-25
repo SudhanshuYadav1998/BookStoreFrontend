@@ -1,5 +1,9 @@
 <div class="example-headers-align">
         <span *ngIf="cartList?.length<1" fxLayoutAlign="center center">Cart is Empty</span>
+        <div class="count" fxLayout="row" fxLayoutAlign="space-between center">
+            <span style="color: black; font-weight: 500;">My Cartlist({{cartList?.length}})</span>
+        </div>
+    
         <div class="cartItem" *ngFor="let cart of cartList">
             <div>
                 <img class="book-image" [src]="cart?.bookImage==('string'||''||null||undefined)? defaultImage : cart?.bookImage" width="110px" height="140px" 
@@ -24,4 +28,4 @@
         </div>
         <mat-action-row >
             <button mat-flat-button color="primary" >Place Order</button>
-        </mat-action-row><br>
+        </mat-action-row>

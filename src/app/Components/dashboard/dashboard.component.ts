@@ -16,25 +16,6 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {this.fullName = localStorage.getItem('name');
   }
-  searchNote(event: any) {
-    //console.log(event.target.value)
-    this.cancel = true;
-    
-    this.search=event.target.value
-
-    if (this.search == '') {
-      this.cancel = false;
-    }
-  }
-
-  searchClear() {
-    this.search = '';
-    this.cancel = false;
-  }
-
-  login(){
-    this.router.navigateByUrl('/login');
-  }
   logOut(){
     localStorage.removeItem('token');
     localStorage.removeItem('name');
