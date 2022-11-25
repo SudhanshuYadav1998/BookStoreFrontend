@@ -7,6 +7,9 @@
   
   mat-expansion-panel{
     border: 1px solid lightgray;
+    width: 900px;
+    height: 500px;
+    margin-left: 170px;
   }
   
   .example-headers-align .mat-expansion-panel-header-title,
@@ -26,6 +29,7 @@
   .cartItem{
     margin-bottom: 15px;
     margin-top: 10px;
+    margin-left: 25px;
     display: flex;
     flex-direction: row;
     // justify-content: flex-start;
@@ -117,4 +121,9 @@
     width: calc((100%) - 20px); 
     margin-bottom: 20px; 
     border-radius: 4px;
+  }
+  .order{
+    background-color: blue;
+    color: #FFFFFF;
+    cursor: pointer;
   }

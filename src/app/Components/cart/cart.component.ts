@@ -28,4 +28,18 @@ export class CartComponent implements OnInit {
       console.log("Cart Deleted Successfully")
     })
   }
+  decreaseQty(cartId: any, qty: any) {
+    if (qty > 1) {
+      this.cartService.updateCrtQty(cartId, (qty - 1)).subscribe((response: any) => {
+        console.log("Decrease cart qty successful", response);
+        this.getallcartlist();
+      });
+    }
+  }
+  increaseQty(cartId: any, qty: any) {
+      this.cartService.updateCrtQty(cartId, (qty + 1)).subscribe((response: any) => {
+        console.log("Increase cart qty successful", response);
+        this.getallcartlist();
+      });
+  }
 }

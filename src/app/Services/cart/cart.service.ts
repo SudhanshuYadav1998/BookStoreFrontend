@@ -29,4 +29,15 @@ export class CartService {
     }
    return this.http.deleteservice(`https://localhost:44322/api/Cart/Delete?cartId=${id}`,{},true,header)
   }
+  updateCrtQty(id:any,qty:any){    
+    console.log(this.token);
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+   return this.http.putservice(`https://localhost:44322/api/Cart/UpdateQty?cartId=${id}&bookQty=${qty}`,{},true,header)
+  }
+
 }

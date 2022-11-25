@@ -1,7 +1,18 @@
 <div class="example-headers-align">
+    <mat-expansion-panel [expanded]="true"  hideToggle>
+        <mat-expansion-panel-header  #panelH (click)="panelH._toggle()">
+            <mat-panel-title><b>My Cart({{cartList.length}})</b></mat-panel-title>
+            <mat-panel-description>
+                <mat-form-field appearance="outline" style="margin-bottom: -15px;">
+                    <mat-label style="font-size: 11px;"><i class="material-icons">location_on</i>Use Current Location</mat-label>
+                    <mat-select>
+                        <mat-option>Use Current Location</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
         <span *ngIf="cartList?.length<1" fxLayoutAlign="center center">Cart is Empty</span>
         <div class="count" fxLayout="row" fxLayoutAlign="space-between center">
-            <span style="color: black; font-weight: 500;">My Cartlist({{cartList?.length}})</span>
         </div>
     
         <div class="cartItem" *ngFor="let cart of cartList">
@@ -11,21 +22,23 @@
                 <span class="outOfStock" *ngIf="cart?.stock==0">OUT OF STOCK</span>
             </div>
             <div class="book-details" fxLayout="column" fxLayoutAlign="start start">
-                <h3 class="bookName">{{cart?.bookName}}</h3>
-                <span class="author">by {{cart?.author}}</span>
+                <h3 class="bookName">{{cart.bookName}}</h3>
+                <span class="author">by {{cart.author}}</span>
                 <div fxLayout="row" fxLayout.lt-sm="column" style="margin-bottom: 10px;">
-                    <div><span class="discountPrice">Rs. {{cart?.discountPrice * cart.booksQty | number:'1.2-2'}}</span></div>
-                    <div><span class="actualPrice">Rs. {{cart?.actualPrice * cart.booksQty | number:'1.2-2'}}</span></div>
-                    <div><span class="discount">{{((cart?.actualPrice-cart?.discountPrice)/cart?.actualPrice)*100 | number:'1.1-1'}}% off</span></div>
+                    <div><span class="discountPrice">Rs. {{cart.discountPrice * cart.booksQty | number:'1.2-2'}}</span></div>
+                    <div><span class="actualPrice">Rs. {{cart.actualPrice * cart.booksQty | number:'1.2-2'}}</span></div>
+                    <div><span class="discount">{{((cart.actualPrice-cart.discountPrice)/cart?.actualPrice)*100 | number:'1.1-1'}}% off</span></div>
                 </div>
                 <div fxLayout="row" fxLayoutAlign="start center">
-                    <button mat-stroked-button mat-icon-button ><i class="material-icons">&#xe15b;</i></button>
+                    <button mat-stroked-button mat-icon-button (click)="decreaseQty(cart.cartId, cart.booksQty)" ><i class="material-icons">&#xe15b;</i></button>
                     <span class="cartQty">{{cart.booksQty}}</span>
-                    <button mat-stroked-button mat-icon-button ><i class="material-icons">&#xe145;</i></button>
+                    <button mat-stroked-button mat-icon-button (click)="increaseQty(cart.cartId, cart.booksQty)"><i class="material-icons">&#xe145;</i></button>
                     <button mat-stroked-button color="warn" (click)="removeFromcartlist(cart.cartId)" style="margin-left: 25px;"> Remove</button>
                 </div>
             </div>
         </div>
         <mat-action-row >
-            <button mat-flat-button color="primary" >Place Order</button>
+            <button class="order" mat-flat-button  color="primary" >Place Order</button>
         </mat-action-row>
+    </mat-expansion-panel><br>
+</div>
