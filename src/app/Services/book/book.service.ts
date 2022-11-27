@@ -10,7 +10,6 @@ export class BookService {
 
   constructor(private http:HttpService) {this.token=localStorage.getItem('token') }
   getallbooks(){    
-    console.log(this.token);
     let header={
       headers:new HttpHeaders({
         'Content-Type': 'application/json',
@@ -18,5 +17,14 @@ export class BookService {
       })
     }
    return this.http.getservice('https://localhost:44322/api/Book/GetAllBook',true,header)
+  }
+  quickView(id: any) {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': `Bearer ${this.token}`
+      })
+    }
+    return this.http.getservice(`https://localhost:44322/api/Book/GetBookById?BookId=${id}`, true, header);
   }
 }

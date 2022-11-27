@@ -25,7 +25,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSelectModule} from '@angular/material/select';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { QuickviewComponent } from './Components/quickview/quickview.component';
-
+import {MatDividerModule} from '@angular/material/divider';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,12 +39,13 @@ import { QuickviewComponent } from './Components/quickview/quickview.component';
     CartComponent,
     OrdersComponent,
     WishlistComponent,
-    QuickviewComponent
+    QuickviewComponent,
+    
   ],
   imports: [
     BrowserModule,FormsModule, ReactiveFormsModule,MatToolbarModule,HttpClientModule,MatMenuModule,MatCardModule,
     AppRoutingModule,MatFormFieldModule,MatInputModule,BrowserAnimationsModule,MatCheckboxModule,MatIconModule,
-    MatSelectModule,MatExpansionModule
+    MatSelectModule,MatExpansionModule,MatDividerModule,MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

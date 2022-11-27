@@ -22,7 +22,6 @@ const routes: Routes = [
   children:[{path: 'books', component: GetallbooksComponent},
   {path: 'orders', component: OrdersComponent},
   {path: 'cart', component: CartComponent},
-  {path: 'books', component: GetallbooksComponent},
   {path: 'wishlist', component: WishlistComponent},
   {path: 'quickview/:bookId', component: QuickviewComponent},
 ]}
