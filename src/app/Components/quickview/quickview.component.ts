@@ -11,7 +11,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./quickview.component.scss']
 })
 export class QuickviewComponent implements OnInit {
-   bookId: any;
+  bookId: any;
   book: any;
   defaultImage= "https://res.cloudinary.com/dd3brtmjv/image/upload/v1669210312/640px-Image_not_available_t8zu5s.png";
   ratingValue: any = 0;

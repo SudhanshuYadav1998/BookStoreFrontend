@@ -26,6 +26,8 @@ export class CartComponent implements OnInit {
    
     this.cartService.removecartlist(cartId).subscribe((response:any)=>{
       console.log("Cart Deleted Successfully")
+      this.getallcartlist();
+
     })
   }
   decreaseQty(cartId: any, qty: any) {
