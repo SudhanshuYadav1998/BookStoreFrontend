@@ -27,6 +27,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { QuickviewComponent } from './Components/quickview/quickview.component';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatRadioModule} from '@angular/material/radio';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +46,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
   imports: [
     BrowserModule,FormsModule, ReactiveFormsModule,MatToolbarModule,HttpClientModule,MatMenuModule,MatCardModule,
     AppRoutingModule,MatFormFieldModule,MatInputModule,BrowserAnimationsModule,MatCheckboxModule,MatIconModule,
-    MatSelectModule,MatExpansionModule,MatDividerModule,MatSnackBarModule
+    MatSelectModule,MatExpansionModule,MatDividerModule,MatSnackBarModule,MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

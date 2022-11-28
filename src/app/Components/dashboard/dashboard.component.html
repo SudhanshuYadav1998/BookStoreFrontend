@@ -17,6 +17,8 @@
                     <span fxLayoutAlign="center center">Profile</span>
                 </div>
                 <mat-menu #profile="matMenu" >
+                    <span class="profile"><b>Hello {{fullName}},</b></span>
+                    <button mat-flat-button class="profile-g" style="padding-left: 0px;" routerLink="/home/orders"><img src="/assets/orders-gray.svg" width="18px" height="18px"><span>My Orders</span></button>
                     <button mat-flat-button class="profile-g" style="padding-left: 0px;" routerLink="/home/wishlist"><img src="/assets/favorite-gray.svg" width="20px" height="20px"><span>My Wishlist</span></button>
                     <button class="logout" mat-stroked-button color="warn" style="margin-right: 50px;" (click)="logOut()">Logout</button>
                 </mat-menu>
