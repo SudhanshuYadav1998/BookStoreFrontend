@@ -25,7 +25,7 @@ export class CartComponent implements OnInit {
   {
    
     this.cartService.removecartlist(cartId).subscribe((response:any)=>{
-      console.log("Cart Deleted Successfully")
+      console.log("Cart Deleted Successfully",response)
       this.getallcartlist();
 
     })

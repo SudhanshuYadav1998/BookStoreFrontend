@@ -5,7 +5,7 @@
     <div class="count" fxLayout="row" fxLayoutAlign="space-between center">
         <span style="color: black; font-weight: 500;">My Wishlist({{wishList.length}})</span>
     </div>
-    <span class="item" *ngIf="wishList?.length<1" fxLayoutAlign="center center">Wishlist is Empty</span>
+    <span class="item" *ngIf="wishList.length<1" fxLayoutAlign="center center">Wishlist is Empty</span>
     <div class="item" *ngFor="let item of wishList" fxLayoutAlign="space-between center">
         <div fxLayout="row">
             <div>

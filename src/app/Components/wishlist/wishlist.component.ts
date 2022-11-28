@@ -26,7 +26,7 @@ export class WishlistComponent implements OnInit {
   {
    
     this.wishlistService.removewishlist(wishlistId).subscribe((response:any)=>{
-      console.log("Book Deleted Successfully")
+      console.log("Book Deleted Successfully",response)
       this.getallwishlist();
     })
   }

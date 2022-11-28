@@ -39,11 +39,10 @@ export class QuickviewComponent implements OnInit {
 
   addFeedback() {
     let reqData = {
-      rating: this.ratingValue,
       comment: this.comment,
       bookId: this.book.bookId
     }
-    this.feedbackService.addFeedback(reqData).subscribe((response: any) => {
+    this.feedbackService.addFeedback(reqData,this.ratingValue).subscribe((response: any) => {
       console.log("Feedback submitted successful", response);
       this.getAllFeedback(this.bookId);
 

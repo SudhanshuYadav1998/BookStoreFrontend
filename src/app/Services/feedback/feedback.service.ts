@@ -9,7 +9,7 @@ export class FeedbackService {
   token: any;
 
   constructor(private httpService:HttpService) {this.token = localStorage.getItem('token') }
-  addFeedback(reqData: any) {
+  addFeedback(reqData: any,rating:any) {
     //console.log(reqData)
     let header = {
       headers: new HttpHeaders({
@@ -17,7 +17,7 @@ export class FeedbackService {
         'Authorization': `Bearer ${this.token}`
       })
     }
-    return this.httpService.postservice('https://localhost:44322/api/FeedBack/Add', reqData, true, header);
+    return this.httpService.postservice(`https://localhost:44322/api/FeedBack/Add?rating=${rating}`, reqData, true, header);
   }
 
   getAllFeedback(id:any){
