@@ -2,7 +2,7 @@
     <div fxLayout="row">
         <span class="home" routerLink="/home">Home / </span><span style="color: black; font-weight: 500;"> My Orders</span>
     </div>
-    <div class="orderItem"  fxLayoutAlign="space-between center" *ngFor="let order of orderList">
+    <div   fxLayoutAlign="space-between center" *ngFor="let order of orderList">
         <div fxLayout="row" >
             <div>
                 <img class="book-image" [src]="order?.bookImage==('string'||''||null||undefined)? defaultImage : order?.bookImage" width="90px" height="110px">

@@ -9,8 +9,6 @@ import { Router } from '@angular/router';
 export class DashboardComponent implements OnInit {
 
   constructor(private router:Router) { }
-  search: any;
-  cancel: boolean = false;
   fullName: any='';
 
 
@@ -18,11 +16,6 @@ export class DashboardComponent implements OnInit {
   }
   logOut(){
     localStorage.removeItem('token');
-    localStorage.removeItem('name');
-    localStorage.removeItem('email');
-    localStorage.removeItem('userId');
-    localStorage.removeItem('mobile');
-    //localStorage.clear();
     this.router.navigateByUrl('/login');
   }
 

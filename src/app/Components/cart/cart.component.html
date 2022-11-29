@@ -36,8 +36,8 @@
                             </div>
                         </div>
                     </div>
-                    <mat-action-row *ngIf="step==0">
-                        <button mat-flat-button color="primary" (click)="step1()">Place Order</button>
+                    <mat-action-row  *ngIf="step==0">
+                        <button class="order" mat-flat-button color="primary" (click)="step1()">Place Order</button>
                     </mat-action-row>
                 </mat-expansion-panel><br>
                 
@@ -135,8 +135,8 @@
                     </div>
                       
                     <mat-action-row *ngIf="isAddEditAddress == false && step==1">
-                        <button mat-stroked-button (click)="step0()">Previous</button>
-                        <button mat-flat-button color="primary" type="submit" (click)="step2(addressId)">Continue</button>
+                        <button mat-stroked-button class="order" (click)="step0()">Previous</button>
+                        <button mat-flat-button class="order" type="submit" (click)="step2(addressId)">Continue</button>
                     </mat-action-row>
                 </mat-expansion-panel><br>
                 
@@ -163,8 +163,8 @@
                     </div>
     
                     <mat-action-row>
-                        <button mat-stroked-button (click)="step1()">Previous</button>
-                        <button mat-flat-button color="primary" (click)="addOrder()">Checkout</button>
+                        <button mat-stroked-button class="order" (click)="step1()">Previous</button>
+                        <button mat-flat-button class="order" (click)="addOrder()">Checkout</button>
                     </mat-action-row>
                 </mat-expansion-panel>
             </div>

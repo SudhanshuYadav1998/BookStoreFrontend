@@ -34,7 +34,8 @@ mat-card{
     border-radius: 5px;
     // box-shadow: 1px 1px 4px gray;
     border: 1px solid lightgray;
-    width: 240px;
+    width: fit-content;
+    height:fit-content;
     // justify-content: space-between;
 }
 

@@ -30,6 +30,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { OrdersucessComponent } from './Components/ordersucess/ordersucess.component';
+import { ProfileComponent } from './Components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { OrdersucessComponent } from './Components/ordersucess/ordersucess.compo
     WishlistComponent,
     QuickviewComponent,
     OrdersucessComponent,
+    ProfileComponent,
     
   ],
   imports: [
