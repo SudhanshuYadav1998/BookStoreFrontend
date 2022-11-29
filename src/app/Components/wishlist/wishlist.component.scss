@@ -1,8 +1,9 @@
 .layout{
     padding-bottom: 20px;
-    padding-left: 12%;
+    padding-left: 15%;
     padding-right: 12%;
     margin-top: 5px;
+    width: 750px;
   }
   .count{
     margin-top: 10px;
@@ -65,3 +66,6 @@ i{
   i:hover{
     color:red !important;
   }
+.delete{
+    margin-left: 75%;
+}
