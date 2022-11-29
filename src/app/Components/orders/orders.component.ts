@@ -12,10 +12,10 @@ export class OrdersComponent implements OnInit {
   constructor(private orderService :OrdersService) { }
 
   ngOnInit(): void {
-    this.getAllOrders()
+    this.getAllOrders();
   }
   getAllOrders() {
-    this.orderService.getAllOrders().subscribe((response: any) => {
+    this.orderService.getOrders().subscribe((response: any) => {
       console.log("GetAll Orders successful", response);
       this.orderList = response.data;
     });

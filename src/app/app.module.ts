@@ -28,6 +28,9 @@ import { QuickviewComponent } from './Components/quickview/quickview.component';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { OrdersucessComponent } from './Components/ordersucess/ordersucess.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,12 +44,13 @@ import {MatRadioModule} from '@angular/material/radio';
     OrdersComponent,
     WishlistComponent,
     QuickviewComponent,
+    OrdersucessComponent,
     
   ],
   imports: [
     BrowserModule,FormsModule, ReactiveFormsModule,MatToolbarModule,HttpClientModule,MatMenuModule,MatCardModule,
     AppRoutingModule,MatFormFieldModule,MatInputModule,BrowserAnimationsModule,MatCheckboxModule,MatIconModule,
-    MatSelectModule,MatExpansionModule,MatDividerModule,MatSnackBarModule,MatRadioModule
+    MatSelectModule,MatExpansionModule,MatDividerModule,MatSnackBarModule,MatRadioModule,MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
