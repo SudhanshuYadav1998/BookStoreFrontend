@@ -3,7 +3,6 @@
     padding-left: 15%;
     padding-right: 12%;
     margin-top: 5px;
-    width: 750px;
   }
   .count{
     margin-top: 10px;
@@ -18,11 +17,12 @@
     flex-direction: row;
     align-items: flex-start;
     border: 1px solid lightgray;
-    padding: 10px 25px;
+    padding: 10px 15px;
 
   }
   .book-image{
     box-shadow: 2px 2px 5px gray;
+    margin-left: 15%;
   }
   .book-details{
     padding: 0px 25px;

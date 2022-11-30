@@ -1,21 +1,22 @@
-<div class="layout" >
+<div class="layout">
     <div fxLayout="row">
         <span class="home" routerLink="/home">Home / </span><span style="color: black; font-weight: 500;"> My Orders</span>
     </div>
-    <div   fxLayoutAlign="space-between center" *ngFor="let order of orderList">
-        <div fxLayout="row" >
-            <div>
-                <img class="book-image" [src]="order?.bookImage==('string'||''||null||undefined)? defaultImage : order?.bookImage" width="90px" height="110px">
-            </div>
+    <div class="orderItem" *ngFor="let order of orderList " fxLayoutAlign="space-between center">
+        <div>
+            <img class="book-image" [src]="order?.bookImage==('string'||''||null||undefined)? defaultImage : order?.bookImage" width="90px" height="110px">
+        </div>
+        <div fxLayout="row">
+            
             <div class="book-details" fxLayout="column" fxLayoutAlign="start start">
-                <h3 class="bookName">{{order.bookName}}</h3>
-                <span class="author">by {{order.author}}</span>
+                <h3 class="bookName">{{order?.bookName}}</h3>
+                <span class="author">by {{order?.author}}</span>
                 <div fxLayout="row" style="margin-bottom: 10px;">
-                    <div><span class="discountPrice">Rs. {{order.orderPrice | number:'1.2-2'}}</span></div>
-                    <div><span class="actualPrice">Rs. {{order.actualPrice | number:'1.2-2'}}</span></div>
+                    <div><span class="discountPrice">Rs. {{order?.orderPrice | number:'1.2-2'}}</span></div>
+                    <div><span class="actualPrice">Rs. {{order?.actualPrice | number:'1.2-2'}}</span></div>
                 </div>
             </div>
         </div>
-        <span><i class="material-icons" style="font-size:10px;color:green">fiber_manual_record</i><b> Order Placed on {{order.orderDate}}</b></span>
+        <span class="last"><i class="material-icons" style="font-size:10px;color:green">fiber_manual_record</i><b> Order Placed on {{order?.orderDate}}</b></span>
     </div>
 </div>
