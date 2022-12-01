@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/Services/User/user.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   loginForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder,private user:UserService) { }
+  constructor(private formBuilder: FormBuilder,private user:UserService,private router:Router) { }
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -32,12 +33,13 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('token',response.data)
         
       })
-      
     }
     else{
       console.log("not works");
       
     }
+    this.router.navigateByUrl('/home/books');
+
   }
 
 }
