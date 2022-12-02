@@ -29,15 +29,15 @@
                                 <div><span class="discount">{{((cart?.actualPrice-cart?.discountPrice)/cart?.actualPrice)*100 | number:'1.1-1'}}% off</span></div>
                             </div>
                             <div fxLayout="row" fxLayoutAlign="start center">
-                                <button mat-stroked-button mat-icon-button (click)="decreaseQty(cart.cartId, cart.booksQty)" [disabled]="cart.booksQty==1"><i class="material-icons">&#xe15b;</i></button>
+                                <button class="incdec" (click)="decreaseQty(cart.cartId, cart.booksQty)" [disabled]="cart.booksQty==1"><mat-icon>remove_circle_outline</mat-icon></button>
                                 <span class="cartQty">{{cart.booksQty}}</span>
-                                <button mat-stroked-button mat-icon-button (click)="increaseQty(cart.cartId, cart.booksQty)" [disabled]="cart.booksQty==10"><i class="material-icons">&#xe145;</i></button>
-                                <button mat-stroked-button color="warn" (click)="removeFromcartlist(cart.cartId)" style="margin-left: 25px;"> Remove</button>
+                                <button class="incdec"  (click)="increaseQty(cart.cartId, cart.booksQty)" [disabled]="cart.booksQty==10"><mat-icon>add_circle_outline</mat-icon></button>
+                                <button class="remove" mat-stroked-button color="warn" (click)="removeFromcartlist(cart.cartId)" style="margin-left: 25px;"> Remove</button>
                             </div>
                         </div>
                     </div>
                     <mat-action-row  *ngIf="step==0">
-                        <button class="order" mat-flat-button color="primary" (click)="step1()">Place Order</button>
+                        <button class="order" mat-raised-button color="primary" (click)="step1()">Place Order</button>
                     </mat-action-row>
                 </mat-expansion-panel><br>
                 

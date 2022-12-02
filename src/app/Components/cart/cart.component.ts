@@ -88,7 +88,6 @@ export class CartComponent implements OnInit {
     }
   }
   step2(addressId: any) {
-    //console.log("selected address :" + addressId)
     if (this.cartList?.length > 0) {
       this.step = 2;
       this.continue = true;
@@ -108,7 +107,6 @@ export class CartComponent implements OnInit {
   }
 
   editAddress(id: any) {
-    // console.log(id, this.address=[])
     this.isAddEditAddress = true;
     this.addressObj = this.addressList.filter((object:any)=>{
       return object.addressId == id;
@@ -132,17 +130,6 @@ export class CartComponent implements OnInit {
   cancel(){
     this.isAddEditAddress = false;
   }
-
-  // getAddressById(addressId: any) {
-  //   this.addressService.getAddressById(addressId).subscribe((response: any) => {
-  //     console.log("Get Address successful", response);
-  //     //this.address = response.data;
-  //   });
-  // }
-
-  // onSubmit() {
-
-  // }
 
   addAddress(){
     if(this.address && this.city && this.state && this.addressType != ''){
@@ -200,18 +187,6 @@ export class CartComponent implements OnInit {
     }
   }
 
-  // deleteAddress(addressId:any){
-  //   this.addressService.deleteAddress(addressId).subscribe((response: any) => {
-  //     console.log("Item removed from cart successfully", response);
-
-  //     if(this.cartList?.length>1){
-  //       this.getAllCart();
-  //     }
-  //     else{
-  //       window.location.reload();
-  //     }
-  //   });
-  // }
 
   addOrder() {
     if (this.cartList?.length > 0) {
